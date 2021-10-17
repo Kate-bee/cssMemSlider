@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+body {
+    width: 100vw;
+    background-color: gray;
+    min-height: 100vh;
+}
+h1 {
+    padding-top: 10px;
+    width: 80%;
+
+    margin: 0 auto;
+    font-size: 34px;
+    text-align: center;
+}
+
+.middle {
+    margin: 0 auto;
+    width: 70%;
+    height: 45vw;
+}
+
+.slider-mem {
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+    border: 10px solid black;
+    border-radius: 2%;
+}
+.container {
+    padding-top: 0.5%;
+    display: flex;
+    min-height: 15%;
+    width: 100%;
+}
+.text-slider {
+    width: 75%;
+    overflow: hidden;
+}
+.text-slides {
+    width: 600%;
+    display: flex;
+}
+.text {
+    width: calc(100% / 6);
+    transition: all 0.8s ease-out;
+}
+.navigation {
+    height: 10%;
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+}
+.checkbox {
+    width: 50%;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+    background-color: grey;
+    cursor: pointer;
+}
+.but {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    border-radius: 50%;
+    background-color: thistle;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease-out;
+    border: 2px solid rgb(31, 1, 31);
+}
+.checkbox:hover .but {
+    background-color: hotpink;
+}
+input[name="r"] {
+    visibility: hidden;
+}
+.slides {
+    width: 600%;
+    height: 100%;
+    display: flex;
+}
+.slide {
+    background-color: black;
+    width: calc(100% / 6);
+    transition: all 0.8s ease-out;
+    display: flex;
+    align-items: center;
+}
+.slide img {
+    display: block;
+    margin: 0 auto;
+    padding: 5px 0;
+    width: 100%;
+}
+#radio1:checked ~ .wraper .navigation .checkbox .b1 {
+    border: 4px solid rgb(31, 1, 31);
+}
+#radio2:checked ~ .wraper .navigation .checkbox .b2 {
+    border: 4px solid rgb(31, 1, 31);
+}
+#radio3:checked ~ .wraper .navigation .checkbox .b3 {
+    border: 4px solid rgb(31, 1, 31);
+}
+#radio4:checked ~ .wraper .navigation .checkbox .b4 {
+    border: 4px solid rgb(31, 1, 31);
+}
+#radio5:checked ~ .wraper .navigation .checkbox .b5 {
+    border: 4px solid rgb(31, 1, 31);
+}
+#radio6:checked ~ .wraper .navigation .checkbox .b6 {
+    border: 4px solid rgb(31, 1, 31);
+}
+#radio1:checked ~ .wraper .slider-mem .slides .s1,
+#radio1:checked ~ .wraper .container .text-slider .text-slides .s1 {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .wraper .slider-mem .slides .s1,
+#radio2:checked ~ .wraper .container .text-slider .text-slides .s1 {
+    margin-left: calc(-1 * (100% / 6));
+}
+
+#radio3:checked ~ .wraper .slider-mem .slides .s1,
+#radio3:checked ~ .wraper .container .text-slider .text-slides .s1 {
+    margin-left: calc(-2 * (100% / 6));
+}
+
+#radio4:checked ~ .wraper .slider-mem .slides .s1,
+#radio4:checked ~ .wraper .container .text-slider .text-slides .s1 {
+    margin-left: calc(-3 * (100% / 6));
+}
+
+#radio5:checked ~ .wraper .slider-mem .slides .s1,
+#radio5:checked ~ .wraper .container .text-slider .text-slides .s1 {
+    margin-left: calc(-4 * (100% / 6));
+}
+
+#radio6:checked ~ .wraper .slider-mem .slides .s1,
+#radio6:checked ~ .wraper .container .text-slider .text-slides .s1 {
+    margin-left: calc(-5 * (100% / 6));
+}
+.link {
+    text-align: end;
+}
+a:hover {
+    color: black;
+}
+@media screen and (width: 1024px) and (height: 600px) {
+    .middle {
+        height: 40vw;
+    }
+}
+@media screen and (width: 1024px) and (height: 1366px) {
+    .middle {
+        width: 90%;
+        height: 70vw;
+    }
+    h1 {
+        font-size: 64px;
+    }
+    h2 {
+        font-size: 46px;
+    }
+    p {
+        font-size: 36px;
+    }
+}
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    .text-slider {
+        width: 100%;
+    }
+    .navigation {
+        margin: 0 auto;
+        width: 40%;
+    }
+}
+@media (max-width: 600px) {
+    .but {
+        width: 15px;
+        height: 15px;
+    }
+    .wraper {
+        width: 85%;
+        height: 60vw;
+    }
+}
