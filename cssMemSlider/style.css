@@ -18,10 +18,7 @@ h1 {
 }
 
 .middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
     width: 70%;
     height: 45vw;
 }
@@ -68,7 +65,7 @@ h1 {
 .but {
     width: 20px;
     height: 20px;
-    position: absolute;
+    position: relative;
     border-radius: 50%;
     background-color: thistle;
     opacity: 1;
@@ -82,7 +79,6 @@ h1 {
     background-color: hotpink;
 }
 input[name="r"] {
-    position: absolute;
     visibility: hidden;
 }
 .slides {
@@ -151,9 +147,7 @@ input[name="r"] {
     margin-left: calc(-5 * (100% / 6));
 }
 .link {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    text-align: end;
 }
 a:hover {
     color: black;
